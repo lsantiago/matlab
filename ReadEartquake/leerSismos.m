@@ -71,14 +71,14 @@ function [matrizDeSismos, arrTiempo, arrCantidadElementos] = leerSismos(director
 
         end
     catch
-        disp('El error al cargar los datos a las matrices');
+        disp('Error al cargar los datos a las matrices');
     end
     
     % borra el archivo temporal
     delete(fileFormat);
 end
 
-% recibe los archivos sísmicos y los convierte a un formato genera donde 
+% recibe los archivos sísmicos y los convierte a un formato general donde 
 % los separadores son espacios
 function[factorTiempo, nroLineasEncabezado] = prepararRegistros(pathFileInput, pathFileFormat)
     factorTiempo = 0.015;
